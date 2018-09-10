@@ -1,0 +1,48 @@
+/*  http://colorpalettes.net/color-palette-3913/ */
+
+.mainDetails{
+    font-family: 'Merienda', cursive;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    max-width: 1500px;
+    padding: 20px;
+    border-bottom: 1px solid #2f0727;
+	background:#c192b8;
+
+}
+
+.photoName{
+    margin-top: 10px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    margin-left: 100px;
+    display: inline-flex; 
+
+}
+#profilePhoto {
+    border-radius: 50%;
+    height: 200px;
+}
+.generalInfo{
+    margin-top: 10px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.info{
+    margin-top: 10px;
+    margin-bottom: 100px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.mainInfo {
+ background-color: #f1d0ee;
+ max-width: 1500px;
+ margin: auto;
+ display: flex;
+ flex-direction: column;
+ padding: 20px;
+ border: 1px solid #2f0727;
+}
