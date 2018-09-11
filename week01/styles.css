@@ -12,7 +12,7 @@ body{
     max-width: 1500px;
     padding: 20px;
     border-bottom: 1px solid #2f0727;
-	background:#c192b8;
+	background: #f1d0ee;
 
 }
 
@@ -42,11 +42,29 @@ body{
 }
 
 .mainInfo {
- background-color: #f1d0ee;
+ background-color: #c192b8;
  max-width: 1500px;
  margin: auto;
  display: flex;
  flex-direction: column;
  padding: 20px;
  border: 1px solid #2f0727;
+}
+
+.professionalSummary{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.left{
+    float: left;
+    margin-right: 40px;
+}
+.right{
+   float: left;
+}
+
+.grey{
+    color: 	#708090;
 }
