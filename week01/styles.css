@@ -1,20 +1,59 @@
-/*  http://colorpalettes.net/color-palette-3913/ */
 
-
-body{
-    font-family: 'Merienda', cursive;
-
+body {
+    font-family: 'Roboto', sans-serif;
 }
-.mainDetails{
-    margin: auto;
+
+
+tr {
+    padding: 8px;
+}
+#googleIcon , #linkedinIcon, #githubIcon{
+    height:100px;
+}
+
+
+
+.info {
+    top: 8px;
+    left: 16px;
+}
+.header {
+    max-width: 1500px;
+    height:500px;
+}
+.socialMedia {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    display: flex;
+    flex-direction: column;
+}
+.mainDetails {
+    /*margin: auto;
     display: flex;
     flex-direction: row;
     max-width: 1500px;
-    padding: 20px;
-    border-bottom: 1px solid #2f0727;
-	background: #f1d0ee;
-
+    padding: 20px*/
+    position: relative;
+    background: #08B57B;
+    color: white;
+    font-family: monospace;
+    height: 250px;
 }
+
+.generalInfo {
+    margin: auto;
+    width: 650px;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    text-align:left;
+}
+
 
 .photoName{
     margin-top: 10px;
@@ -25,13 +64,7 @@ body{
 
 }
 #profilePhoto {
-    border-radius: 50%;
-    height: 200px;
-}
-.generalInfo{
-    margin-top: 20px;
-    margin-right: 100px;
-    margin-left: 100px;
+    height: 300px;
 }
 
 .info{
@@ -42,13 +75,12 @@ body{
 }
 
 .mainInfo {
- background-color: #c192b8;
- max-width: 1500px;
- margin: auto;
- display: flex;
- flex-direction: column;
- padding: 20px;
- border: 1px solid #2f0727;
+    background-color: #E7E7E7;
+    max-width: 1500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
 
 
