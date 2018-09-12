@@ -51,20 +51,32 @@ body{
  border: 1px solid #2f0727;
 }
 
-.professionalSummary{
+
+.column {
     margin: auto;
     display: flex;
     flex-direction: row;
 }
 
-.left{
-    float: left;
-    margin-right: 40px;
-}
-.right{
-   float: left;
+
+
+.grey {
+    padding: 5px;
+    flex-basis: 10%;
 }
 
-.grey{
-    color: 	#708090;
+ h3 {
+    flex-basis: 20%;
+}
+
+p {
+    padding: 5px;
+    flex-basis: 70%;
+}
+
+ul {
+    flex-basis: 60%;
+}
+h2 {
+    flex-basis: 30%;
 }
