@@ -1,0 +1,30 @@
+﻿html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+h1 {
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(33, 120, 64);
+    font-size: 2em;
+    margin: 2em 0;
+}
+
+@media (min-width:480px){
+    #grid-floats {
+       float:right;
+       border-image-width:50%;
+       
+
+
+    }
+    .grid-item::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
