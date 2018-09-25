@@ -1,0 +1,21 @@
+#!/bin/bash
+# My first script
+
+
+touch blank 
+printf 'Hello \n' {1..5} >> greetings.txt
+for (( i = 1; i<5; i++))
+do 
+    head -n 5 greetings.txt > "$i.txt"
+done    
+
+echo "cat" >> pets.txt 
+echo "dog" >> pets.txt
+echo "hamster" >> pets.txt
+echo "cat" >> commands.txt
+echo "ls" >> commands.txt
+echo "pwd" >> commands.txt
+
+sort pets.txt | sort commands.txt| diff  --suppress-common-lines commands.txt -y  pets.txt | 
+uniq | tr -s '[\040\011\012\015|]' '\n'  >>  lovelyCommands.txt
+
