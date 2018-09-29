@@ -1,0 +1,35 @@
+body {
+  color: rgb(68, 68, 68);
+  font-family: Georgia, "Times New Roman", Times, serif;
+
+}
+
+.story-title a,
+.story-perm {
+  text-decoration: none;
+  color: inherit;
+}
+.story-title a:hover,
+.story-perm:hover {
+  color: rgb(0, 0, 0);
+}
+
+#main{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "header header  header"
+  "main main sidebar"
+  "main1 main2 sidebar"
+  "footer  footer footer";
+
+}
+
+
+
+#most-viewed {
+  grid-area: main2;
+
+}
