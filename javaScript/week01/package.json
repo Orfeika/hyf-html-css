@@ -1,0 +1,11 @@
+{
+  "name": "week01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "App.js",
+  "scripts": {
+    "start": "node App.js"
+  },
+  "author": "Orfeika",
+  "license": "UNLICENSED"
+}
