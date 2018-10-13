@@ -107,6 +107,76 @@ let vehicles = ["motorbike","caravan", "bike"];
 //8.
 console.log(vehicles[2]);
 
+
+
+//10. 
+function printAdvertisment(advMessage,vehicles ){
+    for( b in vehicles ){
+        if(vehicles[b] == vehicles[vehicles.length-1]){
+            advMessage+="and " + vehicles[b] + "s."; 
+        } else if(vehicles[b] == vehicles[vehicles.length - 2 ]){
+            advMessage += " " +vehicles[b]+"s "
+        }else{
+            advMessage += " " +vehicles[b]+"s, "
+
+        }
+
+}
+console.log(advMessage);
+
+
+
+}
+
+ let advMesssage = "Amazing Joe's Garage, we service ";
+ printAdvertisment(advMesssage, vehicles);
+
+ //11
+
+vehicles.push("truck");
+printAdvertisment(advMesssage, vehicles);
+
+//12
+var empty = {};
+
+//13
+
+let teachers = {
+    teacher1: { firstName: "Chanchal" , lastName: " "}, 
+    teacher2: { firstName:"Tommy", lastName:""},
+    teacher3: {firstName:"Viktor", lastName: "Wihlborg"},
+    teacher4: {firstName:"Johan", lastName: "Jonsson"},
+    teacher5: {firstName:"Rasmus", lastName:"Hedin"}
+};
+//14
+teachers.teacher1.subject = "algorithms"; 
+teachers.teacher2.subject = "GIT"; 
+teachers.teacher3.subject = "CSS+HTML"; 
+teachers.teacher4.subject = "Javascript"; 
+teachers.teacher5.subject = "Javascript"; 
+
+console.log(teachers);
+
+let x = [1,2,3];
+let y = [1,2,3];
+let z = y;
+function compareVariables(x,y,z) {
+ let   resultStr= x==y?" x==y: true":" x==y:false";
+ resultStr += z==y?" z==y: true":" z==y:false";
+ resultStr += z==x?" z==x: true":" z==x:false";
+ console.log("result: " +  resultStr);
+}
+
+compareVariables(x,y,z);
+
+function compareVariablesP(x,y,z) {
+    let   resultStr= x===y?" x===y: true":" x===y:false";
+    resultStr += z===y?" z===y: true":" z===y:false";
+    resultStr += z===x?" z===x: true":" z===x:false";
+    console.log("result: " +  resultStr);
+   }
+   compareVariablesP(x,y,z);
+
 //16. 
 let o1 = { foo: 'bar' };
 let o2 = { foo: 'bar' };

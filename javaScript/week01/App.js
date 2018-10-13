@@ -11,6 +11,8 @@ console.log("Yhe value of my x will be empty space " +y);
 y = "I am string"
 console.log("Yhe value of my x will be phrase " +y);
 var z = 7.25; 
+var y = x>z?x:z;
+console.log ("y = " + y);
 var a = Math.round(z);
 console.log("z=" + z + " a="+ a);
 var array =[];
