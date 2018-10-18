@@ -107,7 +107,17 @@ let vehicles = ["motorbike","caravan", "bike"];
 //8.
 console.log(vehicles[2]);
 
+//9
+function vehicle(color, type, age){
+    let vehiclesName = vehicles[type];
+ 
 
+    let vehicleAge = age==0?"new":"used"; 
+
+    console.log( "a " + color + " " + vehicleAge  + " "+ vehiclesName);
+}
+
+vehicle("green", 1 , 0);
 
 //10. 
 function printAdvertisment(advMessage,vehicles ){
