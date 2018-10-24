@@ -1,0 +1,48 @@
+body{
+    background-color: #CBA03F;
+}
+
+img {
+    max-height: 300px;
+    position: relative;
+}
+
+ul{
+    list-style: none;
+    display: inline-flex;
+}
+
+
+div.books{
+    /* position: absolute; */
+    align-self: auto;
+    
+
+
+}
+ img .shelf_img{
+    z-index:0; 
+    height: auto; 
+    max-width: 100%; 
+    vertical-align: top; 
+    margin-top:-12px; 
+ }
+
+div.title {
+    -webkit-transform: rotate(90deg); /* Rotate book title 90 degrees */
+    align-self: auto;
+	display: block;
+	position: relative;
+	width: 300px; /* width is height of book */
+	top:150px;
+    right: 130px;
+    background-color: white;
+
+}
+
+#TheLittlePrince img{
+    left: -200px;
+    z-index: 1;
+
+}
+
