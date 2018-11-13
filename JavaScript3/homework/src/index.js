@@ -7,7 +7,9 @@
     xhr.responseType = 'json';
     xhr.onload = () => {
       if (xhr.status < 400) {
+        
         cb(null, xhr.response);
+
       } else {
         cb(new Error(`Network error: ${xhr.status} - ${xhr.statusText}`));
       }
@@ -34,9 +36,25 @@
     fetchJSON(url, (err, data) => {
       const root = document.getElementById('root');
       if (err) {
+        // creating blank list 
+        createAndAppend('header', root, {class: 'header'});
+        let header = document.getElementsByClassName('header')[0];
+        createAndAppend('p', header, {text: "HYF Repositories"} );
+        createAndAppend('select', header, {class: 'repo-selector', id : "RepoList"});
         createAndAppend('div', root, { text: err.message, class: 'alert-error' });
       } else {
+       
+        data.sort(function (item1, item2) {
+          if (item1.name.toUpperCase() < item2.name.toUpperCase())
+            return -1;
+          if ( item1.name > item2.name)
+          return 1;
+          return 0;
+        }
+        )
         console.log(data);
+
+
         createAnRepoList(data);
         let container =  createAndAppend("div", root, {id: "container"})
         createRepoOverwiew(data[0]);
@@ -107,7 +125,7 @@ function createContributors(element){
       let contributors= createAndAppend('div', root, {id: "contributors"});
       createAndAppend("p", contributors,{class: "contributorsHeader" , text: "Contributors"} );
      let ul = createAndAppend("ul", contributors, {class: "contributorsList"});
-     for(let i = 0; data.length; i++){
+     for(let i = 0; i<data.length; i++){
        let li = createAndAppend("li",ul, {class: "contributorItem"} );
        let img = createAndAppend("img", li, {src:data[i].avatar_url, class: "contributorsAvatar", height: 48}) 
        let div = createAndAppend("div", li, {class: "contributorsData"});
