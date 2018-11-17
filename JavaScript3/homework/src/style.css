@@ -1,3 +1,89 @@
 .alert-error {
     color: red;
 }
+
+.header {
+background-color: #189ad3; 
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+align-content: flex-start;
+height: 100px;
+flex-wrap: nowrap;
+max-width: 1000px;
+padding: 5px;
+
+}
+
+.header p {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:1em;
+    font-weight: bold;
+    margin: 1em;
+}
+
+#RepoList{
+    appearance: button;
+    border-radius: 5px;
+    height: 2em;
+    width: 20em;
+    margin-right: 1em;
+    font-size: 1em;
+    text-align: center;
+    vertical-align: middle;
+    
+}
+
+select{
+    font-size: 1em;
+    margin: 10px;
+    padding: 0 10px 0 10px;
+    background-color: white; 
+}
+
+#container{
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    padding: 5px;
+    max-width: 1000px;
+    align-content: stretch;
+}
+
+#RepositoryOverwiew{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 15px);
+    padding: 5px;
+    margin-right: 5px;
+
+    border-radius: 5px;
+    align-content: space-between;
+}
+
+#contributors{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    margin-left: 5px;
+    border-radius: 5px;
+    width: calc(50% - 15px);
+}
+/* 
+ .contributorItem{
+    column-fill: auto;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+}
+
+.contributorsData{
+    display: flex;
+    flex-direction: row;   
+    width: auto;
+} */
