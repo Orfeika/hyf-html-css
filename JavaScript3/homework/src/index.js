@@ -112,7 +112,7 @@ function createRepoOverwiew(element){
  let updatedRow = createAndAppend("tr", table);
  createAndAppend("td", updatedRow, {text:"Updated:", style:"font-weight:bold"})
  let date =  new Date (element.updated_at); 
-  console.log(date);
+ date = date.toUTCString();
  createAndAppend("td", updatedRow, {text:date});
 }
 
