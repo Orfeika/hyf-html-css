@@ -56,7 +56,7 @@
 
 
         createAnRepoList(data);
-        let container =  createAndAppend("div", root, {id: "container"})
+        let container =  createAndAppend("div", root, {id: "container", class: "container"})
         createRepoOverwiew(data[0]);
         createContributors(data[0]);
         //change value if select repo in drop down 
@@ -71,7 +71,6 @@
         createContributors(data[selectedItemIndex]);
       
       };
-        //createAndAppend('pre', root, { text: JSON.stringify(data, null, 2) });
       }
     });
   }
@@ -98,21 +97,23 @@ function createRepoOverwiew(element){
  let table = createAndAppend("table", container, {id: "RepositoryOverwiew"});
  let repoRow = createAndAppend("tr", table);
  //creating row for repository and link 
- createAndAppend("td", repoRow, {text:"Repository:"})
+ createAndAppend("td", repoRow, {text:"Repository:", style:"font-weight:bold"})
  let repoLink = createAndAppend("td", repoRow, );
  createAndAppend("a", repoLink, {href: element.html_url,text: element.name , target: "_blank"})
  //creating row for repo description 
  let descriptionRow = createAndAppend("tr", table);
- createAndAppend("td", descriptionRow, {text:"Description:"})
+ createAndAppend("td", descriptionRow, {text:"Description:", style:"font-weight:bold"})
  createAndAppend("td", descriptionRow, {text: element.description});
  //creating row for forks
  let forkRow = createAndAppend("tr", table);
- createAndAppend("td", forkRow, {text:"Fork:"})
+ createAndAppend("td", forkRow, {text:"Fork:", style:"font-weight:bold"})
  createAndAppend("td", forkRow, {text: element.forks_count});
  // creating 'last time updated' row 
  let updatedRow = createAndAppend("tr", table);
- createAndAppend("td", updatedRow, {text:"Updated:"})
- createAndAppend("td", updatedRow, {text: element.updated_at});
+ createAndAppend("td", updatedRow, {text:"Updated:", style:"font-weight:bold"})
+ let date =  new Date (element.updated_at); 
+  console.log(date);
+ createAndAppend("td", updatedRow, {text:date});
 }
 
 
@@ -128,9 +129,8 @@ function createContributors(element){
      for(let i = 0; i<data.length; i++){
        let li = createAndAppend("li",ul, {class: "contributorItem"} );
        let img = createAndAppend("img", li, {src:data[i].avatar_url, class: "contributorsAvatar", height: 48}) 
-       let div = createAndAppend("div", li, {class: "contributorsData"});
-       let login = createAndAppend("div", div, {text: data[i].login});
-       let badge = createAndAppend("div", div,{text: data[i].contributions} );
+       let login = createAndAppend("a", li, {text: data[i].login, href:data[i].html_url, target: "_blank", class:"contributorName"});
+       let badge = createAndAppend("div", li,{text: data[i].contributions, class:"contributorBadge"} );
 
       }
     }
