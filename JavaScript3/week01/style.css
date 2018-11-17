@@ -27,7 +27,6 @@ body {
     align-content: center;
     align-items: baseline;
     justify-content: flex-start;
-
     background-color: rgb(51, 103, 214);
     padding: 30px 10px;
     width: 100%;
@@ -94,19 +93,43 @@ body {
 
 select{
     font-size: 1em;
-    margin: 10px;
-    padding: 0 10px 0 10px;
+    margin: 2px;
+    padding: 0 2px 0 2px;
     background-color: white; 
 }
 
-#RepoList{
+ #RepoList{
     appearance: button;
     border-radius: 5px;
     height: 2em;
-    width: 20em;
     margin-right: 1em;
     font-size: 1em;
     text-align: center;
     vertical-align: middle;   
+} 
+
+/* @media screen and (max-width: 900px) {
+    .container{
+        flex-flow: wrap row;
+    }
+}
+      */
+
+
+@media screen and (max-width: 411px) {
+#container{
+    flex-wrap: wrap;  
+    flex-direction: column; 
+    align-content: stretch;
+    justify-content: space-between;
 }
 
+
+.header{
+    flex-direction:  column;   
+}
+
+.header > select {
+    min-width: 150px;
+}
+}
