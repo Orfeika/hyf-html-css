@@ -82,4 +82,31 @@ body {
     border-radius: 25%;
 }
 
+.contributorItem a:link {
+    text-decoration: none;
+    color:rgb(0, 0, 0, 81%);
+}
 
+.contributorItem a:visited {
+    color:rgb(0, 0, 0, 81%);
+}
+
+
+select{
+    font-size: 1em;
+    margin: 10px;
+    padding: 0 10px 0 10px;
+    background-color: white; 
+}
+
+#RepoList{
+    appearance: button;
+    border-radius: 5px;
+    height: 2em;
+    width: 20em;
+    margin-right: 1em;
+    font-size: 1em;
+    text-align: center;
+    vertical-align: middle;
+    
+}
