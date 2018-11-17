@@ -41,6 +41,10 @@ body {
 
 .header > select {
     min-width: 250px;
+    font-size: 1em;
+    margin: 10px;
+    padding: 0 10px 0 10px;
+    background-color: white; 
 }
 
 #container {
@@ -91,14 +95,6 @@ body {
     color:rgb(0, 0, 0, 81%);
 }
 
-
-select{
-    font-size: 1em;
-    margin: 10px;
-    padding: 0 10px 0 10px;
-    background-color: white; 
-}
-
 #RepoList{
     appearance: button;
     border-radius: 5px;
@@ -109,4 +105,31 @@ select{
     text-align: center;
     vertical-align: middle;
     
+}
+
+@media screen and (max-width: 411px) {
+.header > select {
+    min-width: auto;
+    max-width: 90%;
+    margin: 2px;
+    padding: 0 2px 0 2px;
+    background-color: white; 
+    
+}
+
+.header{
+    flex-direction:  column;   
+}
+
+#container{
+
+    flex-wrap: wrap;  
+    flex-direction: column; 
+    align-content: stretch;
+    justify-content: space-between;
+}
+
+
+
+
 }
