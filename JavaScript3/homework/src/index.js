@@ -55,7 +55,7 @@
         console.log(data);
 
 
-        createAnRepoList(data);
+        createARepoList(data);
         let container =  createAndAppend("div", root, {id: "container", class: "container"})
         createRepoOverwiew(data[0]);
         createContributors(data[0]);
@@ -80,7 +80,7 @@
   window.onload = () => main(HYF_REPOS_URL);
 
 
-function createAnRepoList(array){
+function createARepoList(array){
   createAndAppend('header', root, {class: 'header'});
   let header = document.getElementsByClassName('header')[0];
   createAndAppend('p', header, {text: "HYF Repositories"} );
