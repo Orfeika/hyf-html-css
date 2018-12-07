@@ -1,0 +1,136 @@
+.alert-error {
+    background-color: rgb(255, 195, 191);
+    color:  rgb(160, 68, 61);
+}
+
+* {
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: rgb(248, 249, 250);
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    align-items: baseline;
+    justify-content: flex-start;
+    background-color: rgb(51, 103, 214);
+    padding: 30px 10px;
+    width: 100%;
+}
+
+.header > p {
+    color: white;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.header > select {
+    min-width: 250px;
+}
+
+#container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+}
+
+#container > div,
+#container > table {
+    flex: 1;
+    margin: 10px 5px;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.contributorsHeader {
+    padding: 10px;
+}
+
+.contributorItem {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    padding: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.16);
+}
+
+.contributorName {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.contributorBadge {
+    color: white;
+    background-color: #6e6e6e;
+    padding: 5px;
+    border-radius: 25%;
+}
+
+.contributorItem a:link {
+    text-decoration: none;
+    color:rgb(0, 0, 0, 81%);
+}
+
+.contributorItem a:visited {
+    color:rgb(0, 0, 0, 81%);
+}
+
+
+select{
+    font-size: 1em;
+    margin: 2px;
+    padding: 0 2px 0 2px;
+    background-color: white; 
+}
+
+ #RepoList{
+    appearance: button;
+    border-radius: 5px;
+    height: 2em;
+    margin-right: 1em;
+    font-size: 1em;
+    text-align: center;
+    vertical-align: middle;   
+} 
+
+/* @media screen and (max-width: 900px) {
+    .container{
+        flex-flow: wrap row;
+    }
+}
+      */
+
+
+@media screen and (max-width: 411px) {
+#container{
+    flex-wrap: wrap;  
+    flex-direction: column; 
+    align-content: stretch;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+
+.header{
+    flex-direction:  column;   
+}
+
+.header > select {
+    min-width: 150px;
+}
+}
