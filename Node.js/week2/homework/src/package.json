@@ -1,0 +1,21 @@
+{
+  "name": "commandlinetest",
+  "version": "1.0.0",
+  "description": "commandline for index.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "list": "./commands/list.js",
+    "add": "./commands/add.js",
+    "remove": "./commands/remove.js",
+    "reset": "./commands/reset.js",
+    "update": "./commands/update.js"
+  },
+  "dependencies": {
+    "commander": "^2.19.0"
+  }
+}
