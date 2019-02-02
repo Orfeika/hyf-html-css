@@ -17,9 +17,8 @@ db.executeQuery(`SELECT Name
                 WHERE Population >= 500000 AND Population <=1000000`);
 
 //What's the name of all the countries on the continent ‘Europe’ ? 
-db.executeQuery(`SELECT city.Name
-                FROM city 
-                JOIN country on city.CountryCode = country.Code
+db.executeQuery(`SELECT Name
+                FROM country 
                 WHERE Continent = 'Europe'`);
 
 // List all the countries in the descending order of their surface areas.

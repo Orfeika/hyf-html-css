@@ -1,6 +1,5 @@
 
 const db = require('./db');
 
-db.executeQuery("DROP SCHEMA IF EXISTS world;");
-db.executeQuery("CREATE SCHEMA world;")
+db.executeQuery("CREATE SCHEMA IF NOT EXISTS world;");
 db.connection.end();
