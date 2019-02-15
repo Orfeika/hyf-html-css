@@ -52,11 +52,22 @@ function selectCountriesWithTheSameLAnguage(language){
   db.connection.end();
 }
 
+
+function selectWithTheSameLAnguage(language){
+  let sql = ` select name
+  from new_world.country
+  inner join new_world.countrylanguage on code = countrycode
+  where IsOfficial = 'T' AND language = ?`;
+  sql = db.connection.format(sql, language);
+  db.executeQuery(sql);
+  db.connection.end();
+}
+
 function countrylanguagesOnContinent(continent){
   let sql = ` select count(1), continent
   from new_world.countrylanguage
   inner join new_world.country on code = countrycode
-  where continent = ?`;
+  group by continent`;
   sql = db.connection.format(sql, language);
   db.executeQuery(sql);
   db.connection.end();
