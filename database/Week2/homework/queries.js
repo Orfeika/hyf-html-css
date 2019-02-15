@@ -33,11 +33,34 @@ function selectLanguages(region) {
 function countNumberOfCities(language) {
     let sql = ` select count(1)
     from new_world.countrylanguage
-    inner join new_world.country on code = countrycode
+    inner join new_world.city
+     on countrylanguage.countrycode = city.countrycode
     where language = ?`;
     sql = db.connection.format(sql, language);
     db.executeQuery(sql);
     db.connection.end();
+}
+
+
+function selectCountriesWithTheSameLAnguage(language){
+  let sql = ` select name
+  from new_world.country
+  inner join new_world.countrylanguage on code = countrycode
+  where IsOfficial = 'T' AND language = ?`;
+  sql = db.connection.format(sql, language);
+  db.executeQuery(sql);
+  db.connection.end();
+}
+
+function countrylanguagesOnContinent(continent){
+  let sql = ` select count(1), continent
+  from new_world.countrylanguage
+  inner join new_world.country on code = countrycode
+  where continent = ?`;
+  sql = db.connection.format(sql, language);
+  db.executeQuery(sql);
+  db.connection.end();
+
 }
 
 
