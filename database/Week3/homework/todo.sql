@@ -15,33 +15,25 @@ create table `user` (
 Primary key(`userName`)
 );
 
-  
-
-   
-create table `userList` (
-  `listID` INT(11) NOT NULL AUTO_INCREMENT, 
-  `userName`  varchar(60) NOT NULL, 
-  primary key ( `ListID`, `userName` ),
-  FOREIGN KEY (`userName`) REFERENCES `user` (`userName`)
-  );
-  
     create table `list` (
-  `listID` INT(11) NOT NULL , 
-  `itemID` INT(11) NOT NULL AUTO_INCREMENT,
+  `userName`  varchar(60) NOT NULL, 
+  `listID` INT(11) NOT NULL AUTO_INCREMENT , 
   `IsDeleted` enum('T','F') NOT NULL DEFAULT 'F',
   `reminder` datetime default null,
-   primary key ( `itemID` , `ListID`),
-   FOREIGN KEY (`listID`) REFERENCES `userList` (`listID`)
+   primary key ( `ListID`, `userName` ),
+   FOREIGN KEY (`userName`) REFERENCES `user` (`userName`)
 );
 
    create table `item` (
-  `itemID` INT(11) NOT NULL, 
+   `listID` INT(11) NOT NULL ,
+  `itemID` INT(11) NOT NULL AUTO_INCREMENT,
   `text` varchar(255), 
   `IsDone` enum('T','F') NOT NULL DEFAULT 'F',
   `IsDeleted` enum('T','F') NOT NULL DEFAULT 'F',
   `isTaged`  enum('T','F') NOT NULL DEFAULT 'F',
    primary key ( `itemID` ), 
-   FOREIGN KEY (`itemID`) REFERENCES `list` (`itemID`));
+   FOREIGN KEY (`listID`) REFERENCES `list` (`listID`));
+
 
 create table `tag` (
 `tagID` INT(11)  NOT NULL AUTO_INCREMENT,

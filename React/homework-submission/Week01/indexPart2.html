@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+
+    <script type="text/babel">
+
+            const Item = (props)=>{
+                return (<li style={props.list.done? {textDecoration: 'line-through'}:null}>
+                {props.list.description +" "+ props.list.deadline}</li>)
+            }
+
+            class List extends React.Component {
+
+                render(){
+
+                    return (
+                        <ul >
+                           {this.props.list.map((item)=>  <Item list = {item} key ={item.id} />)}
+                        </ul>
+                    );
+                }
+            }
+            const root = document.getElementById("root");
+            const todo = [
+  {
+    "id": 1,
+    "description": "Get out of bed",
+    "deadline": "2017-09-11",
+    "done": true
+  },
+  {
+    "id": 2,
+    "description": "Brush teeth",
+    "deadline": "2017-09-10",
+    "done": false
+  },
+  {
+    "id": 3,
+    "description": "Eat breakfast",
+    "deadline": "2017-09-09",
+    "done": false
+  }
+]
+
+            ReactDOM.render(<List list = {todo} />, root);
+
+        </script>
+    </div>
+</body>
+
+</html>

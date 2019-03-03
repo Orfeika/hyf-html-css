@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+
+    <script type="text/babel">
+
+
+            const Item = (props)=>{
+                return (<li>{props.list.todo + props.list.date}</li>)
+            }
+
+            class List extends React.Component {
+
+                render(){
+                    let index  = 0; 
+                    return (
+                        <ul>
+                           {this.props.list.map((item)=>  <Item list = {item} key ={index+=1} />)}
+                        </ul>
+                    );
+                }
+            }
+            const root = document.getElementById("root");
+            const todo = [
+                {"todo" : "Get out of house"  , "date": "Wed Sep 13 2017"},
+                {"todo" : "Brush teeth" , "date": "Thu Sep 14 2017"},
+                {"todo" : "Eat breakfast " , "date":  "Fri Sep 15 2017"}];
+
+            ReactDOM.render(<List list = {todo} />, root);
+
+        </script>
+    </div>
+</body>
+
+</html>
